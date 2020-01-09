@@ -29,22 +29,22 @@
             </div>
         </div>
         <div v-if="hasResult" class="panel result">
-            <div v-if="monsterLife == 0" class="win">Você ganhou!!! :)</div>
-            <div v-else class="lose">Você perdeu! :(</div>
+            <div v-if="monsterLife == 0" class="win">You win!!! :)</div>
+            <div v-else class="lose">You lose! :(</div>
         </div>
         <div class="panel buttons">
             <template v-if="running">
                 <button @click="attack(false)"
-                    class="btn attack">Ataque</button>
+                    class="btn attack">Attack</button>
                 <button @click="attack(true)"
-                    class="btn especial-attack">Ataque Especial</button>
+                    class="btn especial-attack">Especial Attack</button>
                 <button @click="healAndHurt"
-                    class="btn heal">Curar</button>
+                    class="btn heal">Heal</button>
                 <button @click="running = false"
-                    class="btn give-up">Desistir</button>
+                    class="btn give-up">Give up</button>
             </template>
             <button v-else @click="startGame"
-                class="btn new-game">Iniciar Jogo</button>
+                class="btn new-game">Start Game</button>
         </div>
         <div v-if="logs.length"
             class="panel logs">
